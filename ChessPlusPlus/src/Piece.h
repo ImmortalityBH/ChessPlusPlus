@@ -4,8 +4,7 @@
 #include <cstdint>
 
 
-class Piece
-{
+class Piece {
 public:
 	Piece();
 private:

@@ -12,7 +12,7 @@ public:
 	};
 public:
 	Log();
-	void DebugPrint(const std::string what, Log::LOG_TYPE log_type = LOG_TYPE::MSG);
+	static void DebugPrint(const std::string what, Log::LOG_TYPE log_type = LOG_TYPE::MSG);
 	void FlushLog();
 	static Log& Get();
 private:

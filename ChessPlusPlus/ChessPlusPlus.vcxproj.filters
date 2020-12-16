@@ -36,6 +36,9 @@
     <ClCompile Include="src\Board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Window.h">
@@ -56,22 +59,16 @@
     <ClInclude Include="src\Board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\GameMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\README.md" />
     <None Include="scripts\config.lua" />
     <None Include="scripts\pieces.lua" />
-    <None Include="lua53.dll" />
-    <None Include="openal32.dll" />
-    <None Include="sfml-audio.dll" />
-    <None Include="sfml-audio-d.dll" />
-    <None Include="sfml-graphics.dll" />
-    <None Include="sfml-graphics-d.dll" />
-    <None Include="sfml-network.dll" />
-    <None Include="sfml-network-d.dll" />
-    <None Include="sfml-system.dll" />
-    <None Include="sfml-system-d.dll" />
-    <None Include="sfml-window.dll" />
-    <None Include="sfml-window-d.dll" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="log\log.txt" />
   </ItemGroup>
 </Project>

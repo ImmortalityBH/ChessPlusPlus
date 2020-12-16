@@ -18,7 +18,8 @@ Log::Log()
 		std::cout.set_rdbuf(output_file.rdbuf());
 		
 		output_file << "This is a log file used to output"
-			" debug messages at runtime.\n";
+			" debug messages at runtime.\nIt is overwritten with each" 
+			" launch of the application.\n";
 	}
 	catch (const std::exception& e) {
 		Log::DebugPrint(std::string("Failed to"
@@ -27,7 +28,10 @@ Log::Log()
 }
 
 void Log::DebugPrint(const std::string what, Log::LOG_TYPE log_type) {
-	if (output_file.is_open()) {
+	if (Log::Get().output_file.is_open()) {
+		if ((Log::Get().output_file.tellp() / 1000) > 500) {
+			Log::Get().FlushLog();
+		}
 		std::string str; // log type string
 		switch (log_type) {
 		case Log::LOG_TYPE::ERR:
@@ -62,7 +66,10 @@ Log& Log::Get()
 std::string Log::Get_System_Time() {
 	const auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 	std::tm* now = std::localtime(&time);
-	std::string result = std::to_string(now->tm_hour) + ":";
+	std::string result = std::to_string(now->tm_mon + 1) + "/";
+	result.append(std::to_string(now->tm_mday) + "/");
+	result.append(std::to_string(now->tm_year + 1900) + ", ");
+	result.append(std::to_string(now->tm_hour) + ":");
 	result.append(std::to_string(now->tm_min) + ":");
 	result.append(std::to_string(now->tm_sec) + " ");
 	return result;

@@ -1,8 +1,7 @@
 #pragma once
 
 #include <string>
-extern "C"
-{
+extern "C" {
 #include "lua.h"
 #include "lauxlib.h"
 #include "lualib.h"
@@ -11,8 +10,7 @@ extern "C"
 // LuaManager is a singlton that holds a single
 // luaState for use when loading scripts. It
 // may be useful to have more than one for multithreading.
-class LuaManager
-{
+class LuaManager {
 public:
 	LuaManager();
 	LuaManager(const LuaManager&) = delete;
