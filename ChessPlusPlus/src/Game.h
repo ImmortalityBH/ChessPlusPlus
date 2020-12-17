@@ -2,7 +2,7 @@
 
 #include "Window.h"
 #include "Board.h"
-#include "Piece.h"
+#include "GameMenu.h"
 
 class Game {
 public:
@@ -14,6 +14,7 @@ private:
 private:
 	Window window;
 	Board board;
+	GameMenu menu;
 	sf::Clock timer;
 };
 

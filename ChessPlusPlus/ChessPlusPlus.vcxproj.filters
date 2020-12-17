@@ -39,6 +39,9 @@
     <ClCompile Include="src\GameMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Window.h">
@@ -62,6 +65,9 @@
     <ClInclude Include="src\GameMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="scripts\config.lua" />
@@ -70,5 +76,46 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="log\log.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="res\font\cour.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\img\chess_piece_2_white_pawn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_white_rook.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_white_queen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_white_knight.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_white_king.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_white_bishop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_rook.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_queen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_pawn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_knight.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_king.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img\chess_piece_2_black_bishop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -4,6 +4,10 @@
 #include <string>
 
 class Window {
+	struct Size {
+		uint32_t width;
+		uint32_t height;
+	} size;
 public:
 	Window(const std::string& title, const uint32_t width, 
 		const uint32_t height);
@@ -13,7 +17,8 @@ public:
 	void Update();
 	void Begin(const sf::Color& color);
 	void End();
-	std::pair<uint32_t, uint32_t> GetSize() { return std::make_pair(width, height); };
+	Size GetSize() const { return size; };
+	sf::RenderWindow& GetWindow() { return window; }
 private:
 	std::string title;
 	uint32_t width;
